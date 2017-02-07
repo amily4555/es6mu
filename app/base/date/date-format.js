@@ -17,6 +17,10 @@ import $each from '../collection/each';
  *
  * mu.dateFormat( 1458114893684,  'yy年M月d日 h:m:s SS 第q季度 星期w')
  * // -> "16年3月16日 15:54:53 684 第1季度 星期3"
+ *
+ * mu.dateFormat( 1458114893684,  'MM ~M dd ~d')
+ * // 时间字符可以使用'~'防止被替换
+ * // -> "03 M 16 d"
  */
 $_.dateFormat = function(/**{any}*/ src, /**{string}*/ dateformat = 'yyyy-MM-dd') {
 

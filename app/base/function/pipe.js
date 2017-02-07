@@ -1,4 +1,4 @@
-import $_ from "../mu.js";
+import $_ from '../../mu.js';
 
 /**
  * mu.pipe(Function ...fns)
@@ -20,14 +20,14 @@ import $_ from "../mu.js";
  */
 
 $_.pipe = (...fns) => {
-    return (...val) => {
+    return (...args) => {
         return fns.reduce((a, b, i) => {
             if(i) {
                 return b(a);
             } else {
                 return b(...a);
             }
-        }, [...val]);
+        }, [...args]);
     };
 };
 

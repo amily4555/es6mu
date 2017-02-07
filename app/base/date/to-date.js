@@ -35,6 +35,10 @@ import $ifnvl from '../condition/ifnvl';
  *
  * mu.toDate('20170127183000.000', 'yyyyMMddHHmmss.SSS')
  * // -> Fri Jan 27 2017 18:30:00 GMT+0800 (CST)
+ *
+ * -- 黑功能, 获得今天 0 点 0 分 0 秒 --
+ * mu.toDate( new Date(), 'yyyy-MM-dd' )
+ * // -> Thu Jan 26 2017 00:00:00 GMT+0800 (CST)
  */
 $_.toDate = function(/**{string}*/ src, /**string*/ simulate = 'yyyy-MM-dd HH:mm:ss.SSS') {
 
